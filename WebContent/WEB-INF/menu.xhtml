@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+    <head>
+    </head>
+
+    <body>
+		<h:form>
+			<p:growl id="messages" showDetail="true"/>
+		    <div class="card">
+		        <h5>Inline</h5>
+		        <p:menu>
+		            <p:submenu label="Options">
+		                <p:menuitem value="Save (Non-Ajax)" action="#{menuView.save}" update="messages" ajax="false" icon="pi pi-save"/>
+		                <p:menuitem value="Update" action="#{menuView.update}" update="messages" icon="pi pi-refresh"/>
+		                <p:menuitem value="Delete" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
+		            </p:submenu>
+		            <p:submenu label="Navigations">
+		                <p:menuitem value="Website" url="http://www.primefaces.org" icon="pi pi-external-link"/>
+		                <p:menuitem value="Internal" outcome="/ui/menu/menubar" icon="pi pi-upload"/>
+		            </p:submenu>
+		        </p:menu>
+		    </div>
+		 </h:form>
+    </body>
+</html>
